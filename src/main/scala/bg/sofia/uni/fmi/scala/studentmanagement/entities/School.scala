@@ -51,7 +51,8 @@ case class School() {
   def addGradeForStudentInCourse(grade: Double, student: Student, course: Course): Unit = {
     val minPossibleGrade: Int = 2
     val maxPossibleGrade: Int = 6
-    if (grade >= minPossibleGrade && grade <= maxPossibleGrade && student != null && course != null) course.addGradeForStudent(grade, student)
+    if (grade >= minPossibleGrade && grade <= maxPossibleGrade && student != null && course != null && course.getStudents.contains(student))
+      course.addGradeForStudent(grade, student)
   }
 
   /**
