@@ -15,10 +15,10 @@ object SchoolManagementCLI {
 
         printAvailableOptions()
 
-        val userChoice: String = io.StdIn.readLine.trim
+        val userChoice: String = io.StdIn.readLine.trim.toLowerCase
 
         userChoice match {
-          case "q" | "exit" => println(EXIT_MESSAGE)
+          case "q" | "exit" | "quit" => println(EXIT_MESSAGE)
           case "1" => AddNewCourseCommand.execute(school)
           case "2" => AddNewStudentCommand.execute(school)
           case "3" => AddNewTeacherCommand.execute(school)
