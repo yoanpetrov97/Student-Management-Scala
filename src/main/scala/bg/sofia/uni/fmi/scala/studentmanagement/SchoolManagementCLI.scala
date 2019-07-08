@@ -33,7 +33,7 @@ object SchoolManagementCLI {
         }
 
         userChoice match {
-          case "q" | "exit" => run(false)
+          case "q" | "exit" | "quit" => run(false)
           case _ => run(true)
         }
 
